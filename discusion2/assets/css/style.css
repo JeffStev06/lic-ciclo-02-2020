@@ -3,11 +3,77 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-body {
-    padding: 0 50px;
+header, nav, section {
+    padding: 10px 50px;
+}
+header {
+    background-color: #06213b;   
+    color: white;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+nav li {
+    margin: 10px 0;
+}
+nav li > a {
+    text-decoration: none;
+    border-radius: 10%;
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: black;
+    border: 2px solid cornflowerblue;
+}
+.boton a:hover {
     background-color: white;
+    border: 2px solid cornflowerblue
 }
 .paises {
+    background-color: #a8d4ff;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pais h2 {
+    border-bottom: 2px solid cornflowerblue;
+}
+.paises .pais {
+    background-color: gainsboro;
+}
+.paises .pais:hover {
+    background-color: white;
+    cursor: default;
+}
+@media screen and (min-width: 769px) {
+    .paises article {
+        padding: 5px;
+        margin: 5px;
+        flex-basis: 30%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .paises article {
+        padding: 5px;
+        margin: 5px;
+        flex-basis: 44%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .paises article {
+        padding: 5px;
+        margin: 5px;
+        flex-basis: 100%;
+    }
+}
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+}
+footer p {
+    text-align: center;
 }
