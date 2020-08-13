@@ -1,4 +1,9 @@
 body{
-    background:black;
+    background:wheat;
     color: white;
+}
+
+.global{
+    display: flex;
+    flex-direction: row;   
 }

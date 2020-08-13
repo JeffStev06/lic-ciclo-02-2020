@@ -1,4 +1,43 @@
-body{
-    background:black;
-    color: white;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    
+    color: white;
+    padding: 10px;
+
+}
+
+.global{
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+}
+
+#dos{
+    display: flex;
+    flex-direction: row; 
+}
+.card{
+    margin: 3px;
+    border-radius: 3px;
+        
+}
+.cardHeader{
+    border: 2px solid cyan;
+    padding: 5px;
+    border-radius: 3px;
+}
+.cardBody{
+    padding: 5px;
+    border: solid violet;
+    border-width: 0px 2px 2px 2px;
+}
+ul{
+    list-style: none;
+}
+
