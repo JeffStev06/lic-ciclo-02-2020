@@ -1,18 +1,111 @@
 .container-detail{
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    flex-direction: row;
 }
 
 .shadow{
     -webkit-box-shadow: 7px 7px 15px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 7px 7px 15px 1px rgba(0,0,0,0.75);
-box-shadow: 7px 7px 15px 1px rgba(0,0,0,0.75);
-background-color: white;
+    -moz-box-shadow: 7px 7px 15px 1px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 15px 1px rgba(0,0,0,0.75);
+    background-color: white;
+}
+.details{
+    display: flex; 
+    flex-direction: column;
+    width:100%;
 }
 
 .container-detail{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+
+.not1{
     flex-basis: 50%;
 }
+
+.not2{
+    flex-basis: 15%;
+}
+.not3{
+    border-top:2px solid  rgb(255, 251, 5);
+    flex-basis: 15%;
+}
+
+.details-image{
+    display: flex;
+    flex-basis: 100%;
+    padding: 40px;
+    justify-content: center;
+}
+
+.titulo-noti{
+    display: flex;
+    font-size: xx-large;
+    padding: 40px;
+    flex-basis: 10%;
+}
+
+.details-parraf{
+    flex-basis: 40%;
+    display: flex;
+    padding: 40px;
+    text-align: justify;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .container-detail{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        justify-content: center;
+    }
+    .details{
+        display: flex; 
+        flex-direction: column;
+        width:100%;
+    }
+
+    .not1{
+        width: 100%;
+    }
+    
+    .not2{
+        flex-basis: 25%;
+        border-top:2px solid  rgb(255, 251, 5);
+    }
+    .not3{
+        border-top:2px solid  rgb(255, 251, 5);
+        flex-basis: 25%;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container-detail{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        justify-content: center;
+    }
+    .details{
+        display: flex; 
+        flex-direction: column;
+        width:100%;
+    }
+
+    .not1{
+        width: 100%;
+    }
+    
+    .not2{
+        flex-basis: 25%;
+        border-top:2px solid  rgb(255, 251, 5);
+    }
+    .not3{
+        border-top:2px solid  rgb(255, 251, 5);
+        flex-basis: 25%;
+    }
+}
+
