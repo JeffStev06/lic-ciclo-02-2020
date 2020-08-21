@@ -8,7 +8,7 @@ nav {
     color: black;
     height: 50px;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -17,4 +17,14 @@ nav {
     background-color: #000;
     color: rgb(255, 251, 5);
     padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+@media screen and (min-width: 769px) {
+    
 }
