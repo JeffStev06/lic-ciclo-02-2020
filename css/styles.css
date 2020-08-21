@@ -1,3 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav {
+    background-color: rgb(255, 251, 5);
+    color: black;
+    height: 50px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btnInicio {
+    background-color: #000;
+    color: rgb(255, 251, 5);
+    padding: 10px;
+}
+
 .container-detail{
     display: flex;
     flex-direction: row;
@@ -80,6 +101,18 @@
     .not3{
         border-top:2px solid  rgb(255, 251, 5);
         flex-basis: 25%;
+    }
+    .card-head h2 {
+        font-size: 16px;
+    }
+    .card-head h4 {
+        font-size: 11px;
+    }
+    .main {
+        flex-basis: 98%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
     }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
