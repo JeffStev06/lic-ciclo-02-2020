@@ -43,7 +43,7 @@ header li:last-child a {
     list-style: none;
     transition: top 1s ease 0s;
     top: 0;
-    animation: slideForward 25s infinite;
+    animation: slide 25s infinite;
 }
 .slider ul li {
     position: relative;
@@ -54,6 +54,17 @@ header li:last-child a {
     height: 500px;
     text-align: center;
     line-height: 300px;
+}
+@keyframes slide {
+    0%   {top: 0px;}
+    12.5% {top: -500px;}
+    25%  {top: -1000px;}
+    37.5% {top: -1500px;}
+    50%  {top: -2000px;}
+    62.5% {top: -1500px;}
+    75%  {top: -1000px;}
+    87.5% {top: -500px;}
+    100% {top: 0px;}
 }
 .s-1 {
     background-image: url("../img/img001.jpg");
@@ -80,17 +91,7 @@ header li:last-child a {
     background-repeat: no-repeat;
     background-size: cover;
 }
-@keyframes slideForward {
-    0%   {top: 0px;}
-    12.5% {top: -500px;}
-    25%  {top: -1000px;}
-    37.5% {top: -1500px;}
-    50%  {top: -2000px;}
-    62.5% {top: -1500px;}
-    75%  {top: -1000px;}
-    87.5% {top: -500px;}
-    100% {top: 0px;}
-}
+
 /* MAIN CONTAINER */
 .main-container {
     padding: 50px 50px;
