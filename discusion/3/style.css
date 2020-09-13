@@ -1,0 +1,36 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+
+}
+.contenedor {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+.contenedor > div{
+    flex: 1;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    background-color: #e6e6fa;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+button {
+    background-color: rgb(192, 192, 192);
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+.input#C {
+    cursor: pointer;
+}
