@@ -57,11 +57,22 @@ td {
     border: none;
     padding: 10px;
     cursor: pointer;
+    margin: 2px 2px;
 }
 .btn:hover {
     background-color: lightgrey;
 }
 
 /*    Punto-2    */
+.productos {
+    flex: 1;
+    padding: 5px 20px;
+}
+.producto {
+    display: flex;
+}
+.producto p {
+    flex-basis: 50%;
+}
 
 /*    Punto-3    */
