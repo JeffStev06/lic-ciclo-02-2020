@@ -57,8 +57,27 @@ header a:hover {
     flex-direction: column;
 }
 
-/*    Punto-1    */
+.btn {
+    background-color: #f6f5f4;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 2px 2px;
+}
+.btn:hover {
+    background-color: lightgrey;
+}
 
-/*    Punto-2    */
-
-/*    Punto-3    */
+.container.array {
+    flex-direction: row;
+    overflow-x: auto;
+}
+.cuadro {
+    width: 50px;
+    background-color: lightsteelblue;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
