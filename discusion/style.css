@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    height: 70px;
+    background-color: lightslategray;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(102, 119, 138);
+    padding: 8px;
+    border-radius: 5px;
+}
+header a.active {
+    color: yellow;
+}
+header a:hover {
+    color: yellow;
+}
+
+.container {
+    background-color: rgb(233, 238, 245);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*    Punto-1    */
+table, th, td {
+    border: 1px solid lightslategray;
+    border-collapse: collapse;
+}
+.cifra {
+    font-weight: bold;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px
+}
+.btn {
+    background-color: #f6f5f4;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: lightgrey;
+}
+
+/*    Punto-2    */
+
+/*    Punto-3    */
