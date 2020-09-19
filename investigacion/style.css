@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    height: 70px;
+    background-color: lightslategray;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(102, 119, 138);
+    padding: 8px;
+    border-radius: 5px;
+}
+header a.active {
+    color: yellow;
+}
+header a:hover {
+    color: yellow;
+}
+
+.container {
+    background-color: rgb(233, 238, 245);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+}
+.container div {
+    display: flex;
+
+}
+.container .funcion {
+    flex-basis: 10%;
+}
+.container .explicacion {
+    flex-basis: 50%;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .ejemplo {
+    flex-basis: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*    Punto-1    */
+
+/*    Punto-2    */
+
+/*    Punto-3    */
