@@ -9,21 +9,20 @@ function setCifra() {
 
     getArray()
     evaluarCantidades()
+    evaluarMayorMenor()
 }
 
 function getArray() {
     array = Array.from(String(cifra), Number);
 }
 
-function evaluarCantidades() {
+function evaluarCantidades() {    
     let dato1 = array.length;
     let dato2 = 0;
     let dato3 = 0;
     let dato4 = 0;
     let dato5 = 0;
     let dato6 = 0;
-    let dato7 = 0;
-    let dato8 = 0;
 
     for (i = 0; i < array.length; i++) {
         //console.log(array[i])
@@ -49,10 +48,17 @@ function evaluarCantidades() {
     document.getElementById("dato4").innerHTML = dato4
     document.getElementById("dato5").innerHTML = dato5
     document.getElementById("dato6").innerHTML = dato6
-    document.getElementById("dato7").innerHTML = dato7
-    document.getElementById("dato8").innerHTML = dato8
 }
 
 function evaluarMayorMenor() {
-    
+    console.log(array)
+    console.log(typeof array[1])
+    let dato7 = 0
+    let dato8 = 0
+
+    dato7 = Math.max.apply(Math,array)
+    dato8 = Math.min.apply(Math,array)
+
+    document.getElementById("dato7").innerHTML = dato7
+    document.getElementById("dato8").innerHTML = dato8
 }

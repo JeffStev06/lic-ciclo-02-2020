@@ -43,6 +43,9 @@ table, th, td {
     border: 1px solid lightslategray;
     border-collapse: collapse;
 }
+td {
+    text-align: center;
+}
 .cifra {
     font-weight: bold;
     background-color: lightgray;
