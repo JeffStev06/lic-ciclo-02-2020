@@ -18,6 +18,13 @@ function testPop() {
     pintar();
 }
 
+function testReverse() {
+    
+    array.reverse()
+
+    pintar();
+}
+
 function pintar() {
     cuadros = ""
     array.forEach(function(num) {
