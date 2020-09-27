@@ -20,7 +20,7 @@ Empleado = function() {
 }();
 
 function showEmpleado() {
-    nombreCompleto = Empleado.getNombre() + " " + Empleado.apellido
+    nombreCompleto = Empleado.getNombre() + " " + Empleado.getApell()
     
     document.getElementById("empleado").innerHTML = nombreCompleto;
 }
