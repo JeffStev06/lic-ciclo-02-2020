@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Calculator";
+    src: url("../font/Calculator.ttf");
+  }
+
+.calculadora{
+    display:block;
+    margin:0 auto;
+    padding:20px;
+    background-color:black;
+    width:350px;
+    height:575px;
+    border-radius: 5px;
+  }
+  .calculadora td button{
+    display:block;
+    width:70px;
+    height: 70px;
+    font-size: 25px;
+    border-radius: 25px;
+    box-shadow: 4px 3px red;
+  }
+  .calculadora td button:active{
+    box-shadow: 3px 2px red;
+  }
+  #creditos{
+    display:block;
+    padding-top:20px;
+    color:#fff;
+    text-align: center;
+    width:300px;
+  }
+  #resultado{
+    font-family: calculator;
+    display:block;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 50px;
+    width:300px;
+    height: 100px;
+    line-height: 100px;
+    background-color:#fff;
+    border-radius: 5px;
+    overflow: auto;
+  }
