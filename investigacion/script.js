@@ -1,10 +1,41 @@
+Empleado = function() {
+    // Propiedades del objeto
+    var nombre = "";
+    var apellido = "";
 
-function operacion(x) {
-    return function(y) {
-        return x - y;
+    return{
+        getNombre: function(){
+            return nombre;
+        },
+        setNombre: function(n){
+            nombre = n;
+        },
+        getApell: function(){
+            return apellido;
+        },
+        setApell: function(a){
+            apellido = a;
+        }
     }
+}();
+
+function showEmpleado() {
+    nombreCompleto = Empleado.getNombre() + " " + Empleado.apellido
+    
+    document.getElementById("empleado").innerHTML = nombreCompleto;
 }
 
-var miResta = operacion(10)
+window.onload = function () {
+    var btn = document.getElementById("ingresar");
 
-console.log(miResta(3)) // Respuesta 7
+    btn.addEventListener("click", function() {
+        let nombre = document.getElementById("nombre").value;
+        let apellido = document.getElementById("apellido").value;
+
+        Empleado.setNombre(nombre);
+        Empleado.setApell(apellido);
+
+        console.log(Empleado.getNombre())
+        showEmpleado()
+    });
+}

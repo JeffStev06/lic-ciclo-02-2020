@@ -3,10 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Investigacion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="script.js"></script>
 </head>
 <body>
-    
+    <header class="jumbotron">
+        <h1>
+            <b>Closures</b> javascript
+        </h2>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    Una clausura o <b>closure</b> es <i>una funcion que está dentro de otra función</i> 
+                    en pocas palabras. Estas son la funcion externa y función interna, la funcion interna 
+                    tiene acceso a las variables de la externa creando un "contexto" en su declaración.
+                </p>
+                <div id="e1" class="container">
+                    <code>
+                        function crearSaludo(nombre) { <br>
+                        &nbsp;&nbsp;return function () { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert(nombre); <br>
+                        &nbsp;&nbsp;} <br>
+                        } <br>
+                        var saludar = crearSaludo("juan"); <br>
+                        saludar();
+                    </code>
+                </div>
+                <div class="text-muted font-weight-lighter text-right">Ejemplo 1</div>
+                <br>
+                <p>
+                    También podemos entender los closures como un tipo de objeto especial, que posee dos cosas
+                    una función y un entorno de cuando se crea la función, este entorno es el mismo contexto que 
+                    mencionamos antes
+                </p>
+                <h4>¿Para qué sirven y cuándo utilizarlos?</h4>
+                <p>
+                    Es realmente útil este tipo de aplicaciónes en varios ambitos en la programacion oritentada a objetos
+                    por ejemplo, para la creación de métodos o variables privadas, en javascript no se cuenta con
+                    alguna palabra reservada que haga esto posible, pero con closures podemos emular este comportamiento.                    
+                </p>
+                <div id="e2" class="">
+                    <code>
+                        usuario = function() { <br>
+                        &nbsp;&nbsp;var nombreGuardado = "juan"; <br>
+                        &nbsp;&nbsp;return { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;getNombre: function() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return nombreGuardado; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;setNombre: function(nombre) { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nombreGuardado = nombre; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        &nbsp;&nbsp;} <br>
+                        } <br>
+                        usuario();
+                    </code>
+                </div>
+                <div class="text-muted font-weight-lighter text-right">Ejemplo 2</div>
+                <br>
+                <p>
+                    El ejemplo anterior no tenemos acceso directo a sus variables que son locales, en este caso solo
+                    tenemos el nombre que se inicializa con "juan", para acceder a esta propiedad, tenemos que utilizar
+                    la función <code>getNombre()</code> igual para cambiar su valor, la función <code>setNombre("Pedro")</code>. <br>
+                    Otra aplicación que existe para los closures, son las funciones anónimas auto ejecutables, esta es una
+                    manera de tener un código más limpio, y nos puede ayudar aislar partes del código y evitar que este 
+                    afecte a otras partes causando funcionamientos inesperados. <br>
+                    El <i>Ejemplo 1</i> luciría así con esta aplicación:
+                </p>
+                <div id="e3" class="">
+                    <code>
+                        (function (nombre) { <br>
+                        &nbsp;&nbsp;alert(nombre); <br>
+                        })("juan")
+                    </code>
+                </div>
+                <div class="text-muted font-weight-lighter text-right">Ejemplo 3</div>
+                <p>La funcion se encierra en paréntesis para indicar que se hace referencia a la misma, y se le colocan 
+                    unos segundos paréntesis para indicar que se ejecute.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-header">
+                Ejemplo práctico
+            </div>
+            <div id="ejemploP" class="card-body container">
+                <p>
+                    Harémos uso del Ejemplo 2 para crear un objeto con dos propiedades, nombre y apellido a las cuales
+                    no podrémos acceder directamente porque son propiedades privadas. <br>
+                    Si accedemos como <code>Empleado.apellido</code> obtendremos <code>undefined</code>.
+                    La forma correcta sería <code>Empleado.getApellido()</code> obtendremos el apellido ingresado
+                </p>
+                <h4>Ingreso de empleado</h4>
+                <div class="row">
+                    <div class="col-sm">
+                        <form id="registro">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido">
+                        </form>
+                        <button id="ingresar" class="btn btn-primary float-right">Ingresar</button>
+                    </div>
+                    <div class="col-sm">
+                        <div class="">
+                            <p>Bienvenido</p>
+                            <p id="empleado" class="text-center"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
 </body>
 </html>
