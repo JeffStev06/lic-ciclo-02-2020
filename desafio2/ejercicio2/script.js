@@ -40,7 +40,7 @@ function init() {
     })
 
     document.getElementById('btnPagar').addEventListener("click", function() {
-        //document.getElementById("").modal('show')
+        llenarDetalle()
     })
 }
 
@@ -106,7 +106,7 @@ function cargarProductos() {
         tablaHTML = tablaHTML +
             '<tr>'+
                 '<td>'+extras[i-1].nombre+'</td>'+
-                '<td>$ '+toDecimal(extras[i-1].precio)+'</td>'+
+                '<td>$ '+extras[i-1].precio.toFixed(2)+'</td>'+
             '</tr>'
     }
 
@@ -154,7 +154,6 @@ function calcularTotal() {
     for(let i=0; i < cbElements.length; ++i) {
         if (cbElements[i].checked) {
             extras.map(function(extra) { 
-                console.log(extra.id)
                 if (extra.id == cbElements[i].value) {
                     extra.checked = true;
                     total = toDecimal(total + extra.precio)
@@ -181,7 +180,34 @@ function agregarSugerencia() {
     sug.value = ""
 }
 
+function llenarDetalle() {
+    let info = ""
 
+    info = "<h5>Combo</h5>"
+    combos.map(function(combo) {
+        if (combo.id == comboSeleccionado) {
+            info = info + "<p>$ "+ combo.precio.toFixed(2) + " - " + combo.nombre + "</p>";
+        }
+    })
+    info = info + "<br><h5>Extras</h5>"
+    
+    checks = document.getElementsByClassName('check')
+    for (var i = 0; i < checks.length; i++) {
+        if (checks[i].checked) {
+            extras.map(function(x) {
+                if (x.id == checks[i].value) {
+                    info = info + "<p>$ "+ x.precio.toFixed(2) + " - " + x.nombre + "</p>";
+                }
+            })
+        }
+    }
+
+    info = info + "<h5 style='float: right'>Total $ "+ total.toFixed(2) + "</h5>";
+
+    document.getElementById("detalleCompra").innerHTML = info
+}
+
+// Convierte a decimal las cantidades por parámetro
 function toDecimal(num) {
     return parseFloat(num)
 }
@@ -192,15 +218,15 @@ window.addEventListener("load", init, false);
 
 var combos = [
     {
-        id: "1",
+        id: 1,
         nombre: "Super combo",
         precio: 7.25
     }, {
-        id: "2",
+        id: 2,
         nombre: "Combo Personal",
         precio: 5.75
     }, {
-        id: "3",
+        id: 3,
         nombre: "Infantil",
         precio: 3.50
     }
