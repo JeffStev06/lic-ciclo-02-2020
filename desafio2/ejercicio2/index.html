@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafío II Ejercicio 2</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <header class="">
+        <img src="./img/logo.png" class="logo">
+    </header>
+    <br><br>
+    
+    <div class="container">
+        <h2>Elije uno de nuestros combos</h2>
+        <div class="card-deck">
+            <div id="menuCombo1" class="card border-danger active combo">
+                <img src="./img/combo1.jpeg" class="img-combo">
+                <div class="card-body">
+                    <h4>Super Combo</h4>
+                    <ul>
+                        <li>3 Piezas de pollo</li>
+                        <li>Ensalada</li>
+                        <li>Papas frita</li>
+                        <li>Bebida grande</li>
+                    </ul>
+                    <div class="float-right"><b>$7.25</b></div>
+                </div>
+            </div>
+            <div id="menuCombo2" class="card border-warning combo">
+                <img src="./img/combo2.jpeg" class="img-combo">
+                <div class="card-body">
+                    <h4>Combo personal</h4>
+                    <ul>
+                        <li>2 Piezas de pollo</li>
+                        <li>Papas frita</li>
+                        <li>Bebida grande</li>
+                    </ul><br>
+                    <div class="float-right"><b>$5.75</b></div>
+                </div>
+            </div>
+            <div id="menuCombo3" class="card border-info combo">
+                <img src="./img/combo3.jpeg" class="img-combo">
+                <div class="card-body">
+                    <h4>Infantil</h4>
+                    <ul>
+                        <li>1 Pieza de pollo</li>
+                        <li>Papas frita</li>
+                        <li>Bebida pequeña</li>
+                    </ul><br>
+                    <div class="float-right"><b>$3.50</b></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row center-content">
+            <button id="btnOrdenar" class="btn btn-primary">ORDENAR</button>
+        </div>
+        <br>
+        <div id="divOrden" class="row">
+            <div class="card border-light col-md-12">
+                <div class="card-header">
+                    <h4>Detalle de la orden</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Combo</h5>
+                    <div class="radio-panel">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="combo1" value="cmb1">
+                            <label class="form-check-label" for="combo1">
+                                Super Combo
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="combo2" value="cmb2">
+                            <label class="form-check-label" for="combo2">
+                                Combo Personal
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="combo3" value="cmb3">
+                            <label class="form-check-label" for="combo3">
+                                Infantil
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <h5 class="card-title">Extras</h5>
+                    <p class="card-text"></p>
+                    <br>
+                    <h5 class="card-title">Sugerencias <small class="text-muted " style="float: right;"> <kbd>Ctrl+E</kbd> o CLICK para agregar sugerencia <kbd>Ctrl+S</kbd> para guardar</small></h5>
+                    <div class="sugerencias"></div>
+                    <textarea id="inputSugerencia" class="input-sugerencia"></textarea>
+
+                    <hr>
+
+                    <div class="input-group col-md-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" id="inputTotal" class="form-control" disabled>
+                    </div>
+                    <br>
+                    <button id="btnPagar" class="btn btn-info">Pagar</button>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+</body>
+</html>
