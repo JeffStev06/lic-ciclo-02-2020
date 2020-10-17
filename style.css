@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    height: 70px;
+    margin-bottom: 25px;
+    background-color: lightslategray;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(102, 119, 138);
+    padding: 8px;
+    border-radius: 5px;
+}
+header a.active {
+    color: chartreuse;
+}
+header a:hover {
+    color: chartreuse;
+}
+
+.container {
+    background-color: rgb(233, 238, 245);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 50px 10%;
+    display: flex;
+    flex-direction: column;
+}
