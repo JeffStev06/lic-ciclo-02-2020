@@ -6,7 +6,7 @@ var saveIntervalSession
 function initSession() {
     
     document.getElementById("clean").style.display = "none"
-    console.log("SESSION")
+    console.log("SESION")
     startSavingSession()
     
 }

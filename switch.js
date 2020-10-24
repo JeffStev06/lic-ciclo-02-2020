@@ -77,21 +77,3 @@ function changeStorage() {
     }
 
 }
-
-// Evalúa si se utiliza Local o Session storage
-function checkStorage() {
-
-    if (localStorage.opc == 1) {
-        // es Local Storage
-        console.log("Es Local")
-        return
-    } else {
-        // es Session Storage
-        console.log("Es Sesion")
-        return false
-    }
-}
-
-function cleanStorage() {
-    
-}
