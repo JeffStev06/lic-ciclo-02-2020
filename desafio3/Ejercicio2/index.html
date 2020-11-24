@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/alertify.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/alertify.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/bootstrap.css" integrity="sha512-eSjlj23qCNm7hmEQiXiJGCxLVT3weZ47TdIESCNFm8LwNDBtmRAbdDXwkKLLA5HPQIR1yl9JYO0wQG6gIPJoRQ==" crossorigin="anonymous" />
+    
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-lg-6 mt-4">
+            <div id="form" class="card">
+                <div id="titulo" class="card-header">Ingresar Sucursal No.1</div>
+                <div class="card-body">
+                    <div class="input-group mt-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Nombre de la Sucursal</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
+                            aria-describedby="basic-addon1" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <div class="input-group mt-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2">Ganancias</span>
+                                    <span class="input-group-text" id="basic-addon2">$</span>
+                                </div>
+                                <input type="number" class="form-control" value="1000.00" min="1000" placeholder="Ganancia"
+                                    aria-label="Ganancia" aria-describedby="basic-addon2" id="ganancias" name="ganancias">
+                            </div>
+                        </div>
+        
+                        <div class="form-group col-6">
+                            <div class="input-group mt-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">Numero de empleados</span>
+                                </div>
+                                <input type="number" class="form-control" min="10" value="10" placeholder="Empleados"
+                                    aria-label="empleados" aria-describedby="basic-addon3" id="empleados" name="empleados">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="col">
+                            <button type="submit" id="agregar" name="agregar"
+                                class="btn btn-primary btn-lg btn-block">Agregar</button>
+                        </div>
+                        <div class="col">
+                            <button type="submit" id="reset" name="reset"
+                                class="btn btn-secondary btn-lg btn-block">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mt-4">
+            <div class="card">
+                <div class="card-header">Sucursales con ganancias entre $1,000 y $30,000 son:</div>
+                <div class="card-body" id="lt3"></div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">Sucursales con ganancias mayores a $30,000 son:</div>
+                <div class="card-body" id="gt3"></div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
